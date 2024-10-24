@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, p, a {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-cover {
+  background-size: cover;
+}
