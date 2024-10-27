@@ -35,8 +35,7 @@ export default function About() {
 				>
 					At NexLo, our mission is to simplify the complex. We bring
 					breakthrough ideas to life through innovation, technology, and smart
-					solutions. From revolutionizing healthcare with Healthgrid and
-					Medlink, to rethinking urban mobility with Mela smart taxi systems, we
+					solutions. From revolutionizing healthcare with Medlink, to rethinking urban mobility with Mela smart taxi systems, we
 					are at the forefront of innovation.
 				</motion.p>
 

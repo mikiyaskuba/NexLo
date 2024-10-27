@@ -140,7 +140,7 @@ export default function Home() {
 				</motion.div>
 
 				{/* Call-to-Action Buttons */}
-				<div className="mt-12 space-x-4">
+				<div className="mt-12 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center">
 					<motion.div
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.95 }}

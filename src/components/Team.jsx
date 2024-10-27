@@ -1,37 +1,17 @@
 import React from "react";
-
+import Miko from "../assets/miki.jpg";
+import ket from "../assets/kete.jpg";
+import Abr from "../assets/abr.JPG";
 const teamMembers = [
 	{
-		name: "Miko Kuba",
+		name: "Miko Kuba /Mikiyas getu",
 		title: "Founder & CEO",
 		description:
 			"Miko leads the team with a vision for innovation and excellence, shaping the company’s strategy and growth. A passionate leader and full-stack developer.",
-		image: "/path/to/miko-image.jpg", // Replace with actual image path
+		image: Miko, // Replace with actual image path
 		socials: {
 			linkedin: "www.linkedin.com/in/mikiyas-getu-ayele-a830372a0",
 			twitter: "https://twitter.com/miko",
-		},
-	},
-	{
-		name: "Kirubel G.",
-		title: "Chief Technology Officer",
-		description:
-			"Keriubel is the tech genius behind the operation, ensuring every project is built with the latest technologies and scalability in mind.",
-		image: "/path/to/sophia-image.jpg",
-		socials: {
-			linkedin: "https://linkedin.com/in/sophia",
-			twitter: "https://twitter.com/sophia",
-		},
-	},
-	{
-		name: "Abriham A",
-		title: "Lead Designer",
-		description:
-			"Abrish creates stunning visual designs that bring products to life, ensuring that every project not only works but looks amazing.",
-		image: "/path/to/amina-image.jpg",
-		socials: {
-			linkedin: "https://linkedin.com/in/amina",
-			twitter: "https://twitter.com/amina",
 		},
 	},
 	{
@@ -39,12 +19,36 @@ const teamMembers = [
 		title: "Head of Marketing",
 		description:
 			"Ketemaw develops and executes marketing strategies that grow our brand and help us reach new heights, making sure our work gets the attention it deserves.",
-		image: "/path/to/john-image.jpg",
+		image: ket,
 		socials: {
 			linkedin: "https://linkedin.com/in/johndoe",
 			twitter: "https://twitter.com/johndoe",
 		},
 	},
+	{
+		name: "Abriham A",
+		title: "Lead Researcher",
+		description:
+			"Abrsh conducts thorough research to provide data-driven insights, ensuring that our projects are both innovative and impactful.",
+		image: Abr,
+		socials: {
+			linkedin: "https://linkedin.com/in/amina",
+			twitter: "https://twitter.com/amina",
+		},
+	},
+	{
+		name: "Kirubel G.",
+		title: "Chief Technology Officer",
+		description:
+			"Keriubel is the tech genius behind the operation, ensuring every project is built with the latest technologies and scalability in mind.",
+		image:
+			"https://i.pinimg.com/736x/66/36/31/6636315f1088ee6b1c81c5d683e32473.jp",
+		socials: {
+			linkedin: "https://linkedin.com/in/sophia",
+			twitter: "https://twitter.com/sophia",
+		},
+	},
+
 	{
 		name: "Mikiyas ",
 		title: "Senior Developer",
@@ -76,7 +80,7 @@ export default function Team() {
 							className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform transition duration-300 hover:-translate-y-2"
 						>
 							<img
-								className="w-full h-48 object-cover"
+								className="w-full h-47 object-cover"
 								src={member.image}
 								alt={member.name}
 							/>
