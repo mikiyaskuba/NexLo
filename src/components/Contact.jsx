@@ -15,42 +15,41 @@ export default function Contact() {
 			[name]: value,
 		}));
 	};
+const handleSubmit = async (e) => {
+	e.preventDefault();
+	const telegramBotToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+	const telegramChatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-		const telegramBotToken = "7512639808:AAHTSOIBdroYncQib-B1Faju-ZBiGbQ9uvc"; // Replace with your bot token
-		const telegramChatId = "394666753"; // Replace with your chat ID
+	const message = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
 
-		const message = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-
-		try {
-			const response = await fetch(
-				`https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({
-						chat_id: telegramChatId,
-						text: message,
-					}),
-				}
-			);
-
-			const data = await response.json();
-
-			if (data.ok) {
-				setSubmitted(true);
-			} else {
-				console.error("Error:", data);
-				alert(`Failed to send message: ${data.description}`);
+	try {
+		const response = await fetch(
+			`https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					chat_id: telegramChatId,
+					text: message,
+				}),
 			}
-		} catch (error) {
-			console.error("Error sending message:", error);
-			alert("Failed to send message. Please try again.");
+		);
+
+		const data = await response.json();
+
+		if (data.ok) {
+			setSubmitted(true);
+		} else {
+			console.error("Error:", data);
+			alert(`Failed to send message: ${data.description}`);
 		}
-	};
+	} catch (error) {
+		console.error("Error sending message:", error);
+		alert("Failed to send message. Please try again.");
+	}
+};
 
 	return (
 		<div className="bg-gray-900 text-white min-h-screen py-20 px-8">
